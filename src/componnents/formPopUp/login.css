@@ -1,0 +1,93 @@
+.pop-up {
+    position: fixed;
+    inset: 0;
+    z-index: 12;
+    background-color: rgba(185, 185, 185, 0.873);
+}
+
+.pop-up .form-box {
+    padding-top: 2rem;
+    width: 400px;
+    height: 450px;
+    margin: 8rem auto;
+    background-color: rgba(245, 222, 179, 0.159);
+    box-shadow: 0px 0px 20px rgba(42, 42, 42, 0.712);
+    border-radius: 12px;
+    transition: 0.4s;
+    scale: 1;
+    animation: Modal 0.77s 1;
+}
+.pop-up .sign-in{
+    gap: 1.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up .sign-in .sign-in-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+
+}
+
+.pop-up .sign-in .sign-in-title h2 {
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+.pop-up .sign-in .sign-in-title span {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.pop-up .sign-in .input-text {
+    all: unset;
+    height: 45px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.734);
+    padding: 0 1rem;
+    margin: 0 auto;
+    color: azure;
+}
+.pop-up .sign-in .input-text:focus{
+    background-color: rgba(0, 0, 0, 0.941);
+}
+.pop-up .sign-in .input-text::placeholder{
+    color: azure;
+}
+
+.pop-up .sign-in button {
+    all: unset;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.734);
+    height: 45px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 1rem;
+}
+.pop-up .sign-in button:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+
+.pop-up .form-box .sign-in-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    width: 85%;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+.pop-up .form-box .sign-in-footer p a{
+    color: tomato;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
