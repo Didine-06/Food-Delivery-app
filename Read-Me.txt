@@ -1,0 +1,14 @@
+to run this project your need to create react-vite app.
+
+1- npm install -g create-vite
+2- create-vite my-react-app Ecommerce
+3- cd Ecommerce
+4- npm run dev
+
+
+instal needed package 
+
+1- npm install react react-dom react-router-dom
+
+
+
