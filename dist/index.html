@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Delivery App</title>
     
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" href="/Food-Delivery-app/assets/header_img-DfvEA7zQ.png" as="image" type="image/png">
+    <link rel="preload" href="data:image/png;base64,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" as="image" type="image/png">
+    
+    <!-- Meta pour optimiser le cache -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+    
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -29,8 +36,9 @@
       }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-    <script type="module" crossorigin src="/Food-Delivery-app/assets/index-D-oqdBr2.js"></script>
-    <link rel="stylesheet" crossorigin href="/Food-Delivery-app/assets/index-B5d2CpKl.css">
+    <script type="module" crossorigin src="/Food-Delivery-app/assets/index-Cye1-yxG.js"></script>
+    <link rel="modulepreload" crossorigin href="/Food-Delivery-app/assets/images-DCiTH_8K.js">
+    <link rel="stylesheet" crossorigin href="/Food-Delivery-app/assets/index-D_2H6YJy.css">
   </head>
   <body>
     <div id="root"></div>

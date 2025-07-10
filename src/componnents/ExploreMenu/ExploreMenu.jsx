@@ -1,6 +1,8 @@
 import React from 'react'
 import './exploremenu.css'
 import { menu_list } from '../../assets/assets'
+import LazyImage from '../LazyImage/LazyImage'
+
 function ExploreMenu({ isactive, setisactive }) {
 
     return (
@@ -11,18 +13,32 @@ function ExploreMenu({ isactive, setisactive }) {
             <div className="explore-menu-list">
                 {menu_list.map((item, index) => {
                     return (
-
                         <div key={index} className='menu-list' onClick={() => {
                             setisactive(prev => prev === item.menu_name ? "all" : item.menu_name)
-                        }
-                        }>
-                            <img src={item.menu_image} alt="" className={isactive === item.menu_name ? "active" : ""} />
+                        }}>
+                            <LazyImage 
+                                src={item.menu_image} 
+                                alt={item.menu_name}
+                                className={isactive === item.menu_name ? "active menu-image" : "menu-image"}
+                                placeholder={
+                                    <div style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        height: '80px',
+                                        backgroundColor: '#f8f9fa',
+                                        borderRadius: '50%',
+                                        color: '#6c757d',
+                                        fontSize: '12px'
+                                    }}>
+                                        📂
+                                    </div>
+                                }
+                            />
                             <p>{item.menu_name}</p>
                         </div>
-
                     )
                 })}
-
             </div>
             <hr className='hr' />
         </div>

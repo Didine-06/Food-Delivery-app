@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import './navbar.css'
 import { assets } from '../../assets/assets.js'
 import { StoreContext } from '../../context/StoreContext.jsx'
+import LazyImage from '../LazyImage/LazyImage.jsx'
 
 import Login from '../formPopUp/Login.jsx'
 import { Link } from 'react-router-dom'
@@ -21,7 +22,7 @@ function navbar() {
   return (
     <div className='navbar'>
       <div className='navbar-content'>
-        <img src={assets.logo} alt="" style={{ hi: "25px" }} />
+        <img src={assets.logo} alt="Logo" style={{ height: "25px" }} loading="lazy" />
         <ul className='list-item'>
           <Link to='/'><li onClick={() => setisactive("Home")} className={isactive === "Home" ? "active" : ""}>Home</li></Link>
           <Link ><li onClick={() => setisactive("menu")} className={isactive === "menu" ? "active" : ""}>menu</li></Link>

@@ -4,6 +4,19 @@
     height: 34vw;
     margin: 30px auto;
     position: relative;
+    /* Optimisations pour le chargement */
+    background-attachment: local;
+    will-change: transform;
+    /* Preload hint */
+    content-visibility: auto;
+}
+
+/* Optimisation pour les écrans plus petits */
+@media (max-width: 768px) {
+    .header {
+        height: 50vw;
+        background-size: cover;
+    }
 }
 
 .header-content{
